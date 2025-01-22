@@ -1,11 +1,9 @@
 <?php
 
-// Include the BoardingPass class
 require_once '../src/BoardingPass.php';
 
 use App\BoardingPass;
 
-// Test the sorting and description generation
 $boardingPasses = [
     [
         'from' => 'Madrid',
@@ -40,16 +38,13 @@ $boardingPasses = [
     ]
 ];
 
-// Create an instance of BoardingPass
 $sorter = new BoardingPass($boardingPasses);
 
-// Run the journey description test
 echo "Test 1: Journey Description\n";
 echo "===========================\n";
 echo $sorter->getJourneyDescription();
 
 echo '<br><br>';
-// Run the sorting test
 echo "\nTest 2: Sorted Boarding Passes\n";
 echo "=============================\n";
 $sortedPasses = $sorter->sortBoardingPasses();
